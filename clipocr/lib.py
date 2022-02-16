@@ -13,7 +13,7 @@ import pyperclip
 from io import BytesIO
 
 ACCESS_TOKEN_URL = "https://aip.baidubce.com/oauth/2.0/token"
-OCR_URL = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic"
+OCR_URL = "https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic"
 
 def get_config_path() -> Path:
     # find config file
@@ -115,7 +115,7 @@ def baidu_ocr(image: Image, access_token: str) -> str:
     post_data = {
         "image": encoded_image,
         "access_token": access_token,
-        "language_type": "auto_detect",
+        "language_type": "CHN_ENG",
         "detect_direction": "true",
     }
     resp = client.post(OCR_URL, data=post_data)
