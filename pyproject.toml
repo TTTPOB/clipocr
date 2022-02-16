@@ -1,0 +1,28 @@
+[tool.poetry]
+authors = ["tpob <tpob@tpob.xyz>"]
+description = "get text from clipboard image"
+license = "MIT"
+name = "clipocr"
+version = "0.1.0"
+
+[[tool.poetry.source]]
+name = "bfsu"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+[tool.poetry.dependencies]
+httpx = "^0.22.0"
+pyperclip = "^1.8.2"
+python = ">=3.9, <3.11"
+pillow = "^9.0.1"
+pyyaml = "^6.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+pyinstaller = "^4.9"
+
+[tools.poetry.scripts]
+clipocr = "clipocr.main:ocr_clipboard"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
