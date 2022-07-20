@@ -9,7 +9,7 @@
 Download the `exe` file from release
 
 #### Mac/Linux
-Install the dependencies, and run `pyinstaller bin.py --noconsole -D` 
+Install the dependencies, and run `pyinstaller bin.py --noconsole -F` 
 
 #### Config
 
